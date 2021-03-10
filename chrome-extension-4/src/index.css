@@ -1,0 +1,99 @@
+body {
+}
+.App {
+   background-color: #f2fdfd;
+   box-shadow: 2px 2px 4px gray;
+   font-family: "OpenSans";
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   padding: 20px;
+   position: relative;
+   z-index: 5;
+}
+
+.close-btn {
+   position: absolute;
+   top: 2%;
+   right: 2%;
+   transition: all 0.3 ease-in-out;
+}
+.close-btn:hover {
+   color: red;
+}
+
+.my-extension-root {
+   z-index: 5;
+}
+.close-btn {
+   position: absolute;
+   top: 2%;
+   right: 2%;
+   transition: all 0.3 ease-in-out;
+   z-index: 6;
+}
+
+* {
+   padding: 0;
+   margin: 0;
+}
+
+.btn {
+   outline: none;
+   border: none;
+   padding: 16px 42px;
+   box-shadow: 0px 0px 12px -2px rgba(0, 0, 0, 0.5);
+   line-height: 1.25;
+   background: #fc6e51;
+   text-decoration: none;
+   color: white;
+   font-size: 16px;
+   letter-spacing: 0.08em;
+   text-transform: uppercase;
+   position: relative;
+   transition: background-color 0.6s ease;
+   overflow: hidden;
+   cursor: pointer;
+}
+.btn:after {
+   content: "";
+   position: absolute;
+   width: 0;
+   height: 0;
+   top: 50%;
+   left: 50%;
+   transform-style: flat;
+   transform: translate3d(-50%, -50%, 0);
+   background: rgba(255, 255, 255, 0.1);
+   border-radius: 100%;
+   transition: height 0.3s ease, width 0.3s ease;
+}
+.btn:focus,
+.btn:hover {
+   background: #fb512e;
+}
+.btn:active:after {
+   width: 200px;
+   height: 200px;
+}
+
+.text {
+   font-size: 20px;
+   text-align: center;
+   color: #ff4141;
+   margin-bottom: 25px;
+   font-weight: bold;
+}
+#loading-text {
+   color: #64ff64;
+}
+#percentage {
+   background: #ebebeb;
+   border-radius: 5px;
+   box-shadow: 1px 1px 5px rgb(222, 222, 222);
+   font-size: 25px;
+   font-weight: 900;
+   color: #1075fa;
+   padding: 7px 30px;
+}

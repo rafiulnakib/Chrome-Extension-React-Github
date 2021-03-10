@@ -1,0 +1,28 @@
+{
+  "name": "Hello Extensions",
+  "description": "Base Level Extension",
+  "version": "1.0",
+  "manifest_version": 2,
+  "browser_action": {
+    "default_popup": "index.html",
+    "default_title": "Open the popup"
+  },
+  "permissions": ["tabs", "activeTab"],
+  "icons": {
+    "16": "logo192.png",
+    "48": "logo192.png",
+    "128": "logo192.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "css": ["/static/css/main.css"],
+      "js": ["/static/js/main.js", "/static/js/runtime-main.js", "/static/js/chunk.js"]
+    }
+  ],
+  "content_security_policy": "script-src 'self' 'sha256-i2cbUttzfFU3TE6mOojkVSZK8ysGfePAjFqgBb3qSa4=' object-src 'self'",
+  "web_accessible_resources": [
+    "index.html",
+    "/static/*"
+  ]
+}
